@@ -5,19 +5,19 @@ using UnityEngine;
 public class NewAnswer : MonoBehaviour
 {
     public bool isCorrect = false;
-    public Manager manager;
+    public Manager Manager;
 
     public void Answer()
     {
         if (isCorrect)
         {
             Debug.Log("Correct Answer");
-            manager.Correct();
+            Manager.Correct();
         }
         else
         {
             Debug.Log("Wrong Answer");
-            manager.Correct();
+            Manager.Wrong();
         }
     }
 }

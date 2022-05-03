@@ -7,7 +7,7 @@ public class Manager : MonoBehaviour
     public List<Question> Q;
     public GameObject[] options;
     public int currentQuestion;
-    private int i;
+    
 
     [SerializeField]
     public Image please;
@@ -23,9 +23,14 @@ public class Manager : MonoBehaviour
         generateQuestion();
     }
 
+    public void Wrong()
+    {
+        Q.RemoveAt(currentQuestion);
+    }
+
     void SetAnswer()
     {
-        for (i = 0; i < options.Length; i++)
+        for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<NewAnswer>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = Q[currentQuestion].Answers[i];
