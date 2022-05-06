@@ -55,7 +55,7 @@ public class PuzzlePiece : MonoBehaviour
             transform.position = _slot.transform.position;
             _slot.Placed();
             _placed = true;
-            newscore();
+            
 
         }
         else
@@ -72,8 +72,5 @@ public class PuzzlePiece : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    private void newscore()
-    {
-        gm.AddScore(1);
-    }
+
 }
