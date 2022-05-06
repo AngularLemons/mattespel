@@ -25,6 +25,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6a0e5a3b52bde8043a55a631baa19fb2, type: 3}
+    - target: {fileID: 4499198373938173668, guid: eecb672010690d344bdaf3576b45731e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499198373938173668, guid: eecb672010690d344bdaf3576b45731e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 205211263
+      objectReference: {fileID: 0}
     - target: {fileID: 7118094500114522080, guid: eecb672010690d344bdaf3576b45731e, type: 3}
       propertyPath: m_Name
       value: Slot 4

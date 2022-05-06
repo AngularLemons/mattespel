@@ -13,7 +13,7 @@ public class PuzzlePiece : MonoBehaviour
     private bool _dragging, _placed;
     private Vector2 _offset, _originalPosition;
     Sprite face;
-    public GameManager gm;
+  
 
     public int score = 0;
 
@@ -49,13 +49,15 @@ public class PuzzlePiece : MonoBehaviour
 
         _offset = GetMousePos() - (Vector2)transform.position;
     }
-    
+
+  
 
     void OnMouseUp()
     {
         if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
         {
             transform.position = _slot.transform.position;
+
             
             _placed = true;
             score += 1;
@@ -67,19 +69,27 @@ public class PuzzlePiece : MonoBehaviour
             _dragging = false;
         }
 
-        if(score == 4)
+
+        if (score == 4)
         {
             SceneManager.LoadScene("endmemory");
         }
 
     }
 
+  
+
+
+
+
+
     Vector2 GetMousePos()
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    
 
+  
+    
 
 }
