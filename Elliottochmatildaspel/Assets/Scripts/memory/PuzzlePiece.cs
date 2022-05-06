@@ -11,8 +11,11 @@ public class PuzzlePiece : MonoBehaviour
 
     private bool _dragging, _placed;
     private Vector2 _offset, _originalPosition;
-  
+    Sprite face;
+    public ManagerScore gm;
 
+
+   
     private PuzzleSlot _slot;
     public void Init(PuzzleSlot slot)
     {
@@ -45,14 +48,15 @@ public class PuzzlePiece : MonoBehaviour
     }
     
 
-void OnMouseUp()
+    void OnMouseUp()
     {
         if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
         {
             transform.position = _slot.transform.position;
             _slot.Placed();
             _placed = true;
-            
+            newscore();
+
         }
         else
         {
@@ -66,5 +70,10 @@ void OnMouseUp()
     Vector2 GetMousePos()
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    private void newscore()
+    {
+        gm.AddScore(1);
     }
 }

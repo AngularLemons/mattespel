@@ -9,6 +9,11 @@ public class token : MonoBehaviour
     public Sprite face;
     public Sprite back;
 
+    private void Start()
+    {
+        sp.sprite = back;
+    }
+
     public void OnMouseDown()
     {
         if (sp.sprite == back)
