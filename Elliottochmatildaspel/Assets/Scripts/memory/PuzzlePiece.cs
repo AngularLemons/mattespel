@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzlePiece : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class PuzzlePiece : MonoBehaviour
     private bool _dragging, _placed;
     private Vector2 _offset, _originalPosition;
     Sprite face;
-    public ManagerScore gm;
+    public GameManager gm;
+
+    public int score = 0;
 
 
    
@@ -53,9 +56,9 @@ public class PuzzlePiece : MonoBehaviour
         if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
         {
             transform.position = _slot.transform.position;
-            _slot.Placed();
-            _placed = true;
             
+            _placed = true;
+            score += 1;
 
         }
         else
@@ -64,6 +67,10 @@ public class PuzzlePiece : MonoBehaviour
             _dragging = false;
         }
 
+        if(score == 4)
+        {
+            SceneManager.LoadScene("endmemory");
+        }
 
     }
 
@@ -71,6 +78,8 @@ public class PuzzlePiece : MonoBehaviour
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
+
+    
 
 
 }

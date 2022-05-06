@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ManagerScore : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    int score;
+    public int score;
 
    void Start()
     {
         score = 0;
     }
 
-    public void AddScore(int add)
+    public void AddScore()
     {
-        score = score + add;
+        score += 1;
         if(score == 4)
         {
             SceneManager.LoadScene("endmemory");
