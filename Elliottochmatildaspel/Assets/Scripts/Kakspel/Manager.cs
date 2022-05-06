@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -32,6 +33,11 @@ public class Manager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void home()
+    {
+        SceneManager.LoadScene("Start");
+    }
+
     void GameOver()
     {
         quizpanel.SetActive(false);
@@ -43,12 +49,18 @@ public class Manager : MonoBehaviour
     {
         score += 1;
         Q.RemoveAt(currentQuestion);
-        generateQuestion();
+        StartCoroutine(waitForNext());
     }
 
     public void Wrong()
     {
         Q.RemoveAt(currentQuestion);
+        StartCoroutine(waitForNext());
+    }
+
+    IEnumerator waitForNext()
+    {
+        yield return new WaitForSeconds(1);
         generateQuestion();
     }
 
@@ -56,6 +68,7 @@ public class Manager : MonoBehaviour
     {
         for (int i = 0; i < options.Length; i++)
         {
+            options[i].GetComponent<Image>().color = options[i].GetComponent<NewAnswer>().colour;
             options[i].GetComponent<NewAnswer>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = Q[currentQuestion].Answers[i];
 
@@ -71,9 +84,9 @@ public class Manager : MonoBehaviour
     {
         if (Q.Count > 0)
         {
-        currentQuestion = Random.Range(0, Q.Count);
-        please.sprite = Q[currentQuestion].fraga;
-        SetAnswer();
+            currentQuestion = Random.Range(0, Q.Count);
+            please.sprite = Q[currentQuestion].fraga;
+            SetAnswer();
         }
         else
         {

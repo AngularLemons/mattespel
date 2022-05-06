@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 8625cca96a187e34fa8d172e738d53d9
+  - enabled: 1
+    path: Assets/Scenes/Kakspel/kakspel.unity
+    guid: 7bfa1f72d8b649d44889ec3ccca5a709
   m_configObjects: {}
