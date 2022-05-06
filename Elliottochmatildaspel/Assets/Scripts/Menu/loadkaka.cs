@@ -5,6 +5,6 @@ public class loadkaka : MonoBehaviour
 {
    public void loadKaka()
     {
-        SceneManager.LoadScene("kakspel");
+        SceneManager.LoadScene("kakatutorial");
     }
 }
