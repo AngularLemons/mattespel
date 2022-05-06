@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 730962252}
   - component: {fileID: 730962251}
   - component: {fileID: 730962250}
+  - component: {fileID: 730962253}
   m_Layer: 5
   m_Name: Kaka (2)
   m_TagString: Untagged
@@ -465,7 +466,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 730962251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 730962253}
+        m_TargetAssemblyTypeName: loadmemory, Assembly-CSharp
+        m_MethodName: loadMemory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &730962251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,6 +517,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730962248}
   m_CullTransparentMesh: 1
+--- !u!114 &730962253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730962248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1c2cbdc7503684c959a23fec645e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &835118248
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +541,7 @@ GameObject:
   - component: {fileID: 835118252}
   - component: {fileID: 835118251}
   - component: {fileID: 835118250}
+  - component: {fileID: 835118253}
   m_Layer: 5
   m_Name: Kaka (3)
   m_TagString: Untagged
@@ -586,7 +612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 835118251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 835118253}
+        m_TargetAssemblyTypeName: loadapple, Assembly-CSharp
+        m_MethodName: loadApple
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &835118251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +663,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835118248}
   m_CullTransparentMesh: 1
+--- !u!114 &835118253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835118248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729038af22aa1804ab14d99a45cce1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &866549417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,8 +1649,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1893748742}
-        m_TargetAssemblyTypeName: loadapple, Assembly-CSharp
-        m_MethodName: loadApple
+        m_TargetAssemblyTypeName: loadkaka, Assembly-CSharp
+        m_MethodName: loadKaka
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1657,7 +1707,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1893748737}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729038af22aa1804ab14d99a45cce1c5, type: 3}
+  m_Script: {fileID: 11500000, guid: f23e5d453c643014394d344db395fc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1948663027
