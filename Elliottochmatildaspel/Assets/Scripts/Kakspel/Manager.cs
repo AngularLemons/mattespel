@@ -1,24 +1,47 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
     public List<Question> Q;
     public GameObject[] options;
     public int currentQuestion;
-    
+
+    public GameObject quizpanel;
+    public GameObject overpanel;
+
+    public Text scoretext;
+    int totalquestions = 0;
+    public int score;
+
 
     [SerializeField]
     public Image please;
 
     private void Start()
     {
+        totalquestions = Q.Count;
+        overpanel.SetActive(false);
         generateQuestion();
+    }
+
+    public void retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void GameOver()
+    {
+        quizpanel.SetActive(false);
+        overpanel.SetActive(true);
+        scoretext.text = score + "/" + totalquestions;
     }
 
     public void Correct()
     {
+        score += 1;
         Q.RemoveAt(currentQuestion);
         generateQuestion();
     }
@@ -26,6 +49,7 @@ public class Manager : MonoBehaviour
     public void Wrong()
     {
         Q.RemoveAt(currentQuestion);
+        generateQuestion();
     }
 
     void SetAnswer()
@@ -45,9 +69,17 @@ public class Manager : MonoBehaviour
 
     void generateQuestion()
     {
+        if (Q.Count > 0)
+        {
         currentQuestion = Random.Range(0, Q.Count);
         please.sprite = Q[currentQuestion].fraga;
         SetAnswer();
+        }
+        else
+        {
+            Debug.Log("out of questions");
+            GameOver();
+        }
 
 
     }
