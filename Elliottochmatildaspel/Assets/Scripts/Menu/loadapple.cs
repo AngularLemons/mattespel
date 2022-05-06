@@ -6,6 +6,6 @@ public class loadapple : MonoBehaviour
 {
     public void loadApple()
     {
-        SceneManager.LoadScene("kakspel");
+        SceneManager.LoadScene("appel");
     }
 }
