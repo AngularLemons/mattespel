@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Krokodilspel/krokodil.unity
     guid: 6321eab44ac02df4fb0a4c77a7a86920
+  - enabled: 1
+    path: Assets/Scenes/Memory/endmemory.unity
+    guid: 401f8a58a3b22d94a82e83a51847db8a
+  - enabled: 1
+    path: Assets/Scenes/Memory/memory.unity
+    guid: 7d4178fa250c9c343a0096a4e7aa4faf
   m_configObjects: {}

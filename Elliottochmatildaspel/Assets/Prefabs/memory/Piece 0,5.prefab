@@ -63,6 +63,14 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8446543769239159098, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446543769239159098, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1544753121
+      objectReference: {fileID: 0}
     - target: {fileID: 8858990205333708896, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
       propertyPath: m_Name
       value: Piece 0,5

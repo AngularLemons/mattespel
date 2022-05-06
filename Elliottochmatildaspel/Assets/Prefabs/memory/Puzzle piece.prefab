@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 6778849683046397600, guid: e886c85e942700d42ab730a8e33615fd, type: 3}
-  gm: {fileID: 0}
+  score: 0
 --- !u!61 &6987560332264659509
 BoxCollider2D:
   m_ObjectHideFlags: 0
