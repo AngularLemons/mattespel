@@ -40,6 +40,7 @@ public class PuzzlePiece : MonoBehaviour
         var mousePosition = GetMousePos();
 
         transform.position = mousePosition - _offset;
+     
     }
     private void OnMouseDown()
     {
@@ -52,6 +53,8 @@ public class PuzzlePiece : MonoBehaviour
 
   
 
+  
+
     void OnMouseUp()
     {
         if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
@@ -60,7 +63,11 @@ public class PuzzlePiece : MonoBehaviour
 
             
             _placed = true;
-            score += 1;
+
+            if (_placed == true)
+            {
+                score += 1;
+            }
 
         }
         else
@@ -69,17 +76,13 @@ public class PuzzlePiece : MonoBehaviour
             _dragging = false;
         }
 
-
-        if (score == 4)
+        if(score == 4)
         {
             SceneManager.LoadScene("endmemory");
         }
+       
 
     }
-
-  
-
-
 
 
 

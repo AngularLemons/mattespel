@@ -6,38 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: 8625cca96a187e34fa8d172e738d53d9
-  - enabled: 1
-    path: Assets/Scenes/Kakspel/kakspel.unity
-    guid: 7bfa1f72d8b649d44889ec3ccca5a709
-  - enabled: 1
-    path: Assets/Scenes/Kakspel/kakspel.unity
-    guid: 7bfa1f72d8b649d44889ec3ccca5a709
-  - enabled: 1
-    path: Assets/Scenes/Kakspel/kakspel.unity
-    guid: 7bfa1f72d8b649d44889ec3ccca5a709
-  - enabled: 1
-    path: Assets/Scenes/appelspel/appel.unity
-    guid: 85562577d3a6a6c44a9a6a5c4c5f0527
-  - enabled: 1
-    path: Assets/Scenes/Krokodilspel/krokodil.unity
-    guid: 6321eab44ac02df4fb0a4c77a7a86920
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/Memory/memory.unity
-    guid: 7d4178fa250c9c343a0096a4e7aa4faf
-  - enabled: 1
-    path: Assets/Scenes/Kakspel/kakatutorial.unity
-    guid: 547b3d9ace31e9743948418f898badc1
-=======
     path: Assets/Scenes/Memory/endmemory.unity
     guid: 401f8a58a3b22d94a82e83a51847db8a
   - enabled: 1
     path: Assets/Scenes/Memory/memory.unity
     guid: 7d4178fa250c9c343a0096a4e7aa4faf
->>>>>>> c82b7a9853d513f16874f532e1870ac806cac23b
   m_configObjects: {}
