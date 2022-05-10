@@ -16,10 +16,11 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int add)
     {
-        score = score + add;
+        score += add;
        if(score == 4)
         {
             SceneManager.LoadScene("endmemory");
+            Debug.Log("fuck");
         }
     }
 }

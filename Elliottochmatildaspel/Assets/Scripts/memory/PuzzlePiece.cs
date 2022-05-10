@@ -12,63 +12,75 @@ public class PuzzlePiece : MonoBehaviour
 
     private bool _dragging, _placed;
     private Vector2 _offset, _originalPosition;
-    Sprite face;
-  
+    //Sprite face;
+    Vector3 offset;
 
-    public int score = 0;
+    public GameManager gm;
+
+    public int score;
+    public GameObject gameobject;
 
 
    
     private PuzzleSlot _slot;
+
+    /*private void Start()
+    {
+        score = 0;
+    }*/
     public void Init(PuzzleSlot slot)
     {
         _renderer.sprite = slot.Renderer.sprite;
         _slot = slot;
     }
 
-    private void Awake()
+   /* private void Awake()
     {
         _originalPosition = transform.position;
        
-    }
-    private void Update()
+    }*/
+    
+   /* private void Update()
     {
         if (_placed) return;
-        if (!_dragging) return;
+           
+        //if (!_dragging) return;
 
+       // var mousePosition = GetMousePos();
 
-        var mousePosition = GetMousePos();
-
-        transform.position = mousePosition - _offset;
+       // transform.position = mousePosition - _offset;
      
-    }
+    }*/
+   
     private void OnMouseDown()
     {
-       
-        _dragging = true;
+        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        /*_dragging = true;
         //_source.PlayOneShot(_pickUpClip);
 
-        _offset = GetMousePos() - (Vector2)transform.position;
+        _offset = GetMousePos() - (Vector2)transform.position;*/
     }
 
   
 
   
 
-    void OnMouseUp()
+    /*void OnMouseUp()
     {
         if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
         {
             transform.position = _slot.transform.position;
 
-            
+
             _placed = true;
 
             if (_placed == true)
             {
                 score += 1;
-            }
+            }*
 
+            
+            
         }
         else
         {
@@ -82,17 +94,47 @@ public class PuzzlePiece : MonoBehaviour
         }
        
 
-    }
+    }*/
 
-
-
-    Vector2 GetMousePos()
+    void OnMouseDrag()
     {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+
+        if (Vector2.Distance(transform.position, _slot.transform.position) < 2)
+        {
+            transform.position = _slot.transform.position;
+
+            //_placed = true;
+
+            gm.AddScore(1);
+            
+            Debug.Log("helvete");
+
+            this.gameobject.SetActive(false);
+
+            
+
+                
+                /*if (score == 1000)
+                {
+                    SceneManager.LoadScene("endmemory");
+                    Debug.Log("idiot");
+                }*/
+
+
+        }
+        
+      
     }
 
+   
 
-  
-    
+    /* Vector2 GetMousePos()
+     {
+         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+     }*/
+
+
+
 
 }
