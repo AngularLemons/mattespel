@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!50 &5168986189685344745
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858990205333708896}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-24159842503371101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858990205333708896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1cb52d36e319645bfa01415e61c4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 8446543769239159098}
+  gm: {fileID: 0}
+  score: 0
+  gameobject: {fileID: 231951754334600766, guid: bb2755fb5ea843a4b877d181e67dcf12, type: 3}
 --- !u!1001 &6185343928075402856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11,6 +48,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piece 1l5
       objectReference: {fileID: 0}
+    - target: {fileID: 3633417189036487023, guid: 75aa7de7eb25f1b44be717b8f36116cc, type: 3}
+      propertyPath: gameobject
+      value: 
+      objectReference: {fileID: 8858990205333708896}
     - target: {fileID: 5854192658170112148, guid: 75aa7de7eb25f1b44be717b8f36116cc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -59,5 +100,16 @@ PrefabInstance:
       propertyPath: face
       value: 
       objectReference: {fileID: 21300000, guid: bea0891d6310a7a4490966abe0d85cd7, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3633417189036487023, guid: 75aa7de7eb25f1b44be717b8f36116cc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 75aa7de7eb25f1b44be717b8f36116cc, type: 3}
+--- !u!1 &8858990205333708896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3397883594513391112, guid: 75aa7de7eb25f1b44be717b8f36116cc, type: 3}
+  m_PrefabInstance: {fileID: 6185343928075402856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &8446543769239159098 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2373088356801691474, guid: 75aa7de7eb25f1b44be717b8f36116cc, type: 3}
+  m_PrefabInstance: {fileID: 6185343928075402856}
+  m_PrefabAsset: {fileID: 0}

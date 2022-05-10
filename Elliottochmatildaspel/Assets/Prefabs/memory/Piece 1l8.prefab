@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-320027770080778748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7564627143238239381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1cb52d36e319645bfa01415e61c4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 7436470096456902095}
+  gm: {fileID: 7718422394588957906, guid: 33ec0b41b2ea5d7498bba451ffde7fa7, type: 3}
+  score: 0
+  gameobject: {fileID: 8858990205333708896, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
 --- !u!1001 &1300274657310205173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +71,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5168986189685344745, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6168792332974454074, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
       propertyPath: m_Size.x
       value: 0.4
@@ -67,5 +87,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piece 1l8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3007062000139701683, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
+    - {fileID: -24159842503371101, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
+--- !u!1 &7564627143238239381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8858990205333708896, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
+  m_PrefabInstance: {fileID: 1300274657310205173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7436470096456902095 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8446543769239159098, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
+  m_PrefabInstance: {fileID: 1300274657310205173}
+  m_PrefabAsset: {fileID: 0}
