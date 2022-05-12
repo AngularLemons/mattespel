@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     int score;
     
+    
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int add)
     {
         score += add;
-       if(score == 4)
+       if(score == 16)
         {
             SceneManager.LoadScene("endmemory");
             Debug.Log("Snäll");

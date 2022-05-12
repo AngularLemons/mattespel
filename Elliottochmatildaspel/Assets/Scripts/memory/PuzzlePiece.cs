@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.SceneManagement;
 
 public class PuzzlePiece : MonoBehaviour
@@ -16,18 +17,19 @@ public class PuzzlePiece : MonoBehaviour
     Vector3 offset;
 
     public GameManager gm;
+    
 
-    public int score;
+    private int score;
     public GameObject gameobject;
 
 
    
     private PuzzleSlot _slot;
 
-    /*private void Start()
+    private void Start()
     {
         score = 0;
-    }*/
+    }
     public void Init(PuzzleSlot slot)
     {
         _renderer.sprite = slot.Renderer.sprite;
@@ -106,11 +108,10 @@ public class PuzzlePiece : MonoBehaviour
 
             //_placed = true;
 
-            gm.AddScore(1);
+            AddScore();
             
-            Debug.Log("helvete");
+            
 
-            this.gameobject.SetActive(false);
 
             
 
@@ -127,14 +128,31 @@ public class PuzzlePiece : MonoBehaviour
       
     }
 
-   
+
 
     /* Vector2 GetMousePos()
      {
          return Camera.main.ScreenToWorldPoint(Input.mousePosition);
      }*/
 
+    public void AddScore()
+    {
+        score += 1;
 
+        if (score == 3)
+        {
+            
+        Debug.Log("piss");
+            SceneManager.LoadScene("endmemory");
+            Debug.Log("fuck");
+        }
+       
+
+        
+
+    }
+
+    
 
 
 }

@@ -34,8 +34,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 8667413498947420278}
-  gm: {fileID: 0}
-  score: 0
+  gm: {fileID: 7718422394588957906, guid: 33ec0b41b2ea5d7498bba451ffde7fa7, type: 3}
+  forstor: {fileID: 8611309983192146220}
   gameobject: {fileID: 8611309983192146220}
 --- !u!1001 &968538256723788108
 PrefabInstance:
