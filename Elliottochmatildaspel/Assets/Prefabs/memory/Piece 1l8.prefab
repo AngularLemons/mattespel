@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 7436470096456902095}
+<<<<<<< HEAD
   gm: {fileID: 0}
   score: 0
+=======
+  gm: {fileID: 7718422394588957906, guid: 33ec0b41b2ea5d7498bba451ffde7fa7, type: 3}
+  forstor: {fileID: 7564627143238239381}
+>>>>>>> 9203568d73997d9347828fda5d08ea1141c56b34
   gameobject: {fileID: 7564627143238239381}
 --- !u!1001 &1300274657310205173
 PrefabInstance:
