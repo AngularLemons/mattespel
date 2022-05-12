@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _renderer: {fileID: 7436470096456902095}
   gm: {fileID: 7718422394588957906, guid: 33ec0b41b2ea5d7498bba451ffde7fa7, type: 3}
-  score: 0
-  gameobject: {fileID: 8858990205333708896, guid: 4b7f97e4b49eeaa4b987ec323fff5a0f, type: 3}
+  forstor: {fileID: 7564627143238239381}
+  gameobject: {fileID: 7564627143238239381}
 --- !u!1001 &1300274657310205173
 PrefabInstance:
   m_ObjectHideFlags: 0
