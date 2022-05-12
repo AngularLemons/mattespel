@@ -108,9 +108,9 @@ public class PuzzlePiece : MonoBehaviour
 
             gm.AddScore(1);
             
-            //Debug.Log("helvete");
+            Debug.Log("helvete");
 
-            //this.gameobject.SetActive(false);
+            this.gameobject.SetActive(false);
 
             
 

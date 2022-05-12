@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
        if(score == 4)
         {
             SceneManager.LoadScene("endmemory");
-            Debug.Log("fuck");
+            Debug.Log("Snäll");
         }
     }
 }
